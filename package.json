@@ -24,15 +24,12 @@
     "@electron/fuses": "^1.8.0",
     "@vercel/webpack-asset-relocator-loader": "^1.7.3",
     "css-loader": "^6.11.0",
-    "electron": "33.0.1",
+    "electron": "^26.6.10",
     "node-loader": "^2.0.0",
     "style-loader": "^3.3.4"
   },
   "keywords": [],
-  "author": {
-    "name": "Ridho Prasetya",
-    "email": "ndiing.inc@gmail.com"
-  },
+  "author": "Ridho Prasetya <ndiing.inc@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "electron-squirrel-startup": "^1.0.1",
@@ -40,5 +37,6 @@
     "mssql": "^11.0.1",
     "sqlite3": "^5.1.7",
     "update-electron-app": "^3.0.0"
-  }
+  },
+  "repository": "github:ndiing/electron-boilerplate"
 }
