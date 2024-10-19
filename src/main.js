@@ -29,7 +29,7 @@ const createWindow = () => {
   // // Open the DevTools.
   // mainWindow.webContents.openDevTools();
 
-  const icon = nativeImage.createFromPath('images/icon.png')
+  const icon = nativeImage.createFromPath('./images/icon.png')
   tray = new Tray(icon)
 
   const contextMenu = Menu.buildFromTemplate([
