@@ -2,6 +2,8 @@ const { app, BrowserWindow } = require('electron');
 const path = require('node:path');
 const { updateElectronApp } = require('update-electron-app')
 updateElectronApp()
+require('mssql/msnodesqlv8')
+require('sqlite3')
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) {
