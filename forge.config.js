@@ -10,7 +10,8 @@ module.exports = {
           owner: 'ndiing',
           name: 'electron-boilerplate'
         },
-        // prerelease: true
+        prerelease: false,
+        draft: false,
       }
     }
   ],
