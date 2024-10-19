@@ -35,6 +35,10 @@
   },
   "license": "MIT",
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.1"
+    "electron-squirrel-startup": "^1.0.1",
+    "msnodesqlv8": "^4.2.1",
+    "mssql": "^11.0.1",
+    "sqlite3": "^5.1.7",
+    "update-electron-app": "^3.0.0"
   }
 }
