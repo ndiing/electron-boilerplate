@@ -1,7 +1,9 @@
 const { app, BrowserWindow,Tray, Menu, nativeImage } = require('electron');
 const path = require('node:path');
 const { updateElectronApp } = require('update-electron-app')
-updateElectronApp()
+updateElectronApp({
+  updateInterval: '5 minutes',
+})
 require('mssql/msnodesqlv8')
 require('sqlite3')
 
