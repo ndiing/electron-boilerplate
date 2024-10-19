@@ -16,7 +16,7 @@ module.exports = {
   ],
   packagerConfig: {
     asar: true,
-    icon: './images/icon' // no file extension required
+    icon: 'images/icon' // no file extension required
   },
   rebuildConfig: {},
   makers: [
@@ -26,7 +26,7 @@ module.exports = {
               // An URL to an ICO file to use as the application icon (displayed in Control Panel > Programs and Features).
               iconUrl: 'https://raw.githubusercontent.com/ndiing/electron-boilerplate/refs/heads/master/images/icon.ico',
               // The ICO file to use as the icon for the generated Setup.exe
-              setupIcon: './images/icon.ico'
+              setupIcon: 'images/icon.ico'
       },
     },
     {
@@ -36,12 +36,12 @@ module.exports = {
     {
       name: '@electron-forge/maker-deb',
       config: {
-         icon: './images/icon.png'
+         icon: 'images/icon.png'
       },
     },
     {
       name: '@electron-forge/maker-rpm',
-      config: {icon: './images/icon.png'},
+      config: {icon: 'images/icon.png'},
     },
   ],
   plugins: [

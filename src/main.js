@@ -31,16 +31,16 @@ const createWindow = () => {
   // // Open the DevTools.
   // mainWindow.webContents.openDevTools();
 
-  const icon = nativeImage.createFromPath('./images/icon.png')
+  const icon = nativeImage.createFromPath('images/icon.png')
   tray = new Tray(icon)
 
   const contextMenu = Menu.buildFromTemplate([
-    { label: 'Quit the application', role:'quit',click: () => {
+    { label: 'Quit', role:'quit',click: () => {
       app.quit()
     } },
   ])
 
-  // tray.setToolTip('This is my application.')
+  tray.setToolTip(`${app.getName()} ${app.getVersion()}`)
   tray.setContextMenu(contextMenu)
 };
 
