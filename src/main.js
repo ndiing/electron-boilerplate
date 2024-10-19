@@ -33,10 +33,9 @@ const createWindow = () => {
   tray = new Tray(icon)
 
   const contextMenu = Menu.buildFromTemplate([
-    { label: 'Item1', type: 'radio' },
-    { label: 'Item2', type: 'radio' },
-    { label: 'Item3', type: 'radio', checked: true },
-    { label: 'Item4', type: 'radio' }
+    { label: 'Quit the application', role:'quit',click: () => {
+      app.quit()
+    } },
   ])
 
   tray.setToolTip('This is my application.')
