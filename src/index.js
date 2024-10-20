@@ -1,8 +1,8 @@
-require("@ndiinginc/env")('.env',{
-    HTTP_PORT:80,
-    HTTPS_PORT:443,
-    HOSTNAME:'localhost',
-    HTTP_PROXY:'http://127.0.0.1:8888',
+require("@ndiinginc/env")(".env", {
+    HTTP_PORT: 80,
+    HTTPS_PORT: 443,
+    HOSTNAME: "localhost",
+    HTTP_PROXY: "http://127.0.0.1:8888",
 });
 const express = require("express");
 const { getCertsForHostname } = require("@ndiinginc/cert");
