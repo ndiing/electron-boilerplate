@@ -34,12 +34,12 @@ const createWindow = () => {
     // // Open the DevTools.
     // mainWindow.webContents.openDevTools();
 
-    const icon = nativeImage.createFromDataURL("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAsQAAALEBxi1JjQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAASdSURBVEiJtVVdbJNlFH7e9/tru64bHR0wGLBuCwqC4DKQjW513bo1uhhRo4kXJuqFIYFo9M6bJXqh0QQxxhhujD+ISvhRIPthwGCCGi80kiyGYDe2FdcRSrut/f7f14uOptvH/CHx3H3nPO9zznPO+d4X+J9NWCoQC8UCtcE1VX+MjaX+jqAzHK6rXr+ejo2N5e4WF5c6qAoql23xQGeoTeGE5Dhn75wZPn8JAKItbS0AeZ1w7mE20QQZzy/FQ4o/wuGw6Fbdnt6femeK/dGmaCVEu59zVHCbuRhjhLnItqGhockFqnfEfKpbzQ0NDVl3fLQYIKhChS0bx6NN0cpCC5of2QTRPg2OrQSopgINUIEuJyq/En24tbu4CFs2jsuG7F9SAQDEQpGNDPwD7hYfFw2j1LLpbwAJLMZxzmAZFuOi/SBkeUyx6QkKsq93+OxIMY4uPigxbYIDYlmizLSY+PLdyAGAEAoiUEps6UDgZsDggCgxbWIxzjHkhy51ZC+HhtWGIFbWSZUPJE3zSiHIbBdAAEo1AEiqmt/D+YaVq2j14VtEU6qqHJvkaBEAdIbatr9bXfvhRre7sdg/m8uBcMBb4in4bmUySBnGzVcz04/2XTj782IuR4sAoK9+c2aj291Q7Bs3dOz5cxx7khOYNPSCv9xXCsm2Al8E1vvuxrXgR+tqjewMrg1+vU5xda1VlGBxrDdzGz9m55BjDBWihE3uvApKCHTLxJRlhuKVlc/U1wRHrl0fLaxvQUEsFlM4429KXH+s2evjADBlmhjVNQBAk9cHvyDCL4jY6c0XG9c0JC0DLkmBH/AxhcQYw1vhcNh1h5d0hSJbOEgNJ3w3Bfm27+LgMfPFfVdHNa3+lYk4LM7x2srViPjKF8zgTOY29idvQCQEb1euhlfXjeDJr5TOUPuTHLybgBwn4KOUER5lYAHKyCd9FwePzSdm46YOi/N8pfMqim1Uz8/B4hyTtgFC8uD+4cGjhOJTBhbgBB3iwMVz7y0+TIAbzV7fhu5yP2ZsG7uXLXck2O2vQMq2UCaIaJA90DQ1eyfWf+HseQDnHUMGgPb29rLNcklXlSzf31hSil2lPnhoflSGaYIAkGUJHipgV6kPjSVezGazmAEfvbpmxaF4PK4X8znWlBr88PBc6jQABgAn0ym8n0xAZXYBk2MM+6cSOJVOwWYMqqHhF1v9nOr40sHn0M4xcy6V/AbAIQCYNHQMZNI4nUkXIKfSKZyZSSNh6kjPzcElKVcPTWsfESCzmM75HhByLSe46wRB22tZrsYXAivuWyMraCgpAcy8iub5tjW73JibndFLlWVttpSoJ6DX/lkBw7jAESQHD2ZE2WhVKL3QXe5HlaQUIKslGa2KC2o2d8vr9m1ZfuTjBAitAYjjsltwF0UikQpBxxEw4dmBywPT+Y6B2C/tfQKcPpeZm22yuC0S0IRl272rjn72BpmfVWRHZIUg4TCxxaf6f+h3PrM96KHRUORkR1PHVkfwX1p7S/u2aEvkux70FDpTWNPA0wGqZrWRwe8Hf73XBPHr8amadbW/z26fnR4ZGeH3yvOf7C8gOOT3Ktw5XQAAAABJRU5ErkJggg==");
+    const icon = nativeImage.createFromDataURL("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAIAAABvFaqvAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAGYktHRAD/AP8A/6C9p5MAAAAHdElNRQfoChYOBgq1EEA/AAAEnklEQVQ4y61VW2xUVRRd+9zHTKcz0yl9UURLy0MEizEgCfChbWoMwRoTY/io8qHy4QNjNBoS+gGRD0mUIMH4SAxIQnxEjQYSYgQTUCEpL8EqlYfWUhzaYdrCzPTOvfecvf24bal8u3/2OTnnrL3WOTlrU8f1Z/B/hB0lERBFAwEIBAIIRCACJNoDEYgAJABBBIAQkQgA2BJlYDJDIJYoAJ6UfQkFDIBALjkVFFcgBmNq8+SxW0BTYUGVxDNi5tp33efcfac9U0FlTe5ceKEv/FMgSZVg8O3SbgNSUGNcaHUWvJTqut+9B4AWIxCHbAAX9cB7hX3H/DMpVRlxnzpID2XX3eJCaowLaxOrX696tsz+J4VvfvJP53hUwBlVtcxdtC75eINds7f47a7CvqRKyDQoq+m1JRNcSI2Z4hOJhzdm1h/xTjx3vftQ+biPQISNmBtcOBv0fVn6rpISXanOGNyj3sk4xXhSkNX06pLonTwut1izd9ZuOu6deTH3ZrVKdVSsGNZ5BhPIhqpAXIG+H/+5WqW7Up29wcVLwUCc3OjmFTMLMxieKa9PPwlgc36XC3tz9YatNa8sdRcVdIkEhjlkLYwMpXeM7h3S+Q1VT0Fg2AgzMysREUGZ/QZV25FY+cXNg/3B1YV28/J4K4DOZDuz4ckwbJSQZ8q7b3w932laaLeUjAcBsyhmBotnyvPsJgBHSyddcW7ooic+gBPjvypREVJUWbN2xekZPweg1VlQNj4YIhxJk5DDejUDQDbMVcDt9wcPFY8B6Bk/G5hAMQmLZkMCY1gJ5cMRLbrRrjWTfBWzsDCzaNYAiKGNicF9N7fH52BH46ZqSufCvG98JTQSjhnWzCwiCjSBIjwhzRhWTIPBNQCz7HrPlF1xhoL8hsEt9XbNV3N2tbrzH021HWj+sCvTaYvtG79O1Siy+oOrYEwwMsyatQPnvHdJi34kuSowYchhJSWOFHqe/7u72kp/3rxzS+PLM6zMpoYXlsYXDQcjbZXLAZws9TqwtTHMrKIrtEUNhflPR/avybQ1O7PGddkYnaLU4Zs97X1Pfzz8xaB/rcz+wbEjPxZOzbLq1teuPV48fd67HIMbCbQNMwAiYpY/yv0AXDjMrMkokiqVHNU3t/7z/gfDn2Ws1GX/ioHe07Itpty3sh9ZYhlmFgZgMzMghkgbvTA2p2CKvaULDrmuZY2EYyDEyY1T7Ho4MuBnW2J3vN20cVVqWffA9jOl8xk7rY2e+P3MLADIQNDg1Lrkbm/qXpa8t9GtOzR27MDoD1f8LIMb3fr29MquuscAvNG/bd/I/oxdFRgNgCIgwwyCiMThtrizY8rtSK/oHb/wS+G31dUPrqlum24yB/KH38nu7iv/lbHTIevpSzT3VAcAASyoBxKLs2Gu379a5HEjXO/MWFwxb7Y7k0gNBbnfvcuD4VBcxSutCiPmNmOj5hPt0e8XSIk9m6wYuRZZBASiy+xr0ZFVxVUsRq5AWFgmFUUgAGwjAoAgAJIqISIiokULoIBKVRHVAMAioegIIloVYKoPRFYrAhII/9d2DUSEaXrtie4QdZQIkKLpv+2a7eeuxog1AAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDI0LTEwLTIyVDE0OjA2OjAzKzAwOjAwB4aaKgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyNC0xMC0yMlQxNDowNjowMyswMDowMHbbIpYAAAAodEVYdGRhdGU6dGltZXN0YW1wADIwMjQtMTAtMjJUMTQ6MDY6MTArMDA6MDDcjBlKAAAAAElFTkSuQmCC");
     tray = new Tray(icon);
 
     const contextMenu = Menu.buildFromTemplate([
         {
-            label: "Quit",
+            label: "Berhenti",
             role: "quit",
             click: () => {
                 app.quit();
@@ -54,6 +54,8 @@ const createWindow = () => {
 if (!gotTheLock) {
     app.quit();
 } else {
+    require("./index.js");
+
     app.on("second-instance", (event, commandLine, workingDirectory, additionalData) => {
         // // Print out data received from the second instance.
         // console.log(additionalData);

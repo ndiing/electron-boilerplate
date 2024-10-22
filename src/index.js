@@ -1,8 +1,14 @@
-require("@ndiinginc/env")(".env", {
-    HTTP_PORT: 80,
-    HTTPS_PORT: 443,
+process.on("uncaughtException", console.log);
+process.on("unhandledRejection", console.log);
+const path = require("path");
+process.env.APP_DIRNAME = path.join(process.env.APPDATA, "electron-boilerplate");
+require("@ndiinginc/env")(process.env.APP_DIRNAME + "/.env", {
+    HTTP_PORT: 2000,
+    HTTPS_PORT: 0,
     HOSTNAME: "localhost",
-    HTTP_PROXY: "http://127.0.0.1:8888",
+    // HTTP_PROXY: "http://127.0.0.1:8888",
+    WHATSAPP_WEBHOOK: "http://127.0.0.1:3000/:_id/webhook",
+    WHATSAPP_AUTOSTART: false,
 });
 const express = require("express");
 const { getCertsForHostname } = require("@ndiinginc/cert");
@@ -11,7 +17,7 @@ const https = require("https");
 const { redirect } = require("./middleware/index.js");
 const { WebSocketServer } = require("ws");
 
-const options = getCertsForHostname("localhost");
+const options = getCertsForHostname("localhost", { dirname: process.env.APP_DIRNAME });
 const app = express();
 
 // app.use(redirect());

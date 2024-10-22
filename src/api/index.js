@@ -3,7 +3,11 @@ const { security, cors, cookies, compression, body, authorization, missing, catc
 
 const router = express.Router();
 
-router.use(security());
+router.use(
+    security({
+        "Content-Security-Policy": "default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;",
+    }),
+);
 router.use(cors());
 router.use(compression());
 router.use(cookies());
