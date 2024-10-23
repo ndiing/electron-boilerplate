@@ -39,10 +39,17 @@ const createWindow = () => {
 
     const contextMenu = Menu.buildFromTemplate([
         {
-            label: "Berhenti",
-            role: "quit",
+            label: "Quit",
             click: () => {
                 app.quit();
+            },
+        },
+        { type: 'separator' },
+        {
+            label: "Relaunch",
+            click: () => {
+                app.relaunch();
+                app.exit(0);
             },
         },
     ]);
