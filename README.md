@@ -49,3 +49,7 @@ npx postject out/bundle.exe NODE_SEA_BLOB out/bundle.blob ^
 signtool sign /fd SHA256 /a out/bundle.exe
 
 ```
+
+```
+test update v2
+```
